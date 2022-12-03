@@ -7,13 +7,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 
-public class CaixaVerdePage {
+public class QuadroVerdePage {
 
-//    public ChromeDriver navegador;
+//  public ChromeDriver navegador;
     public FirefoxDriver navegador;
     public Actions actions;
     private String url = "https://codepen.io/choskim/pen/RLYebL";
-    private By mapGreenBox = By.className("square");
+    private By mapQuadroVerde = By.className("square");
 
     public void abrirPagina(){
 //        System.setProperty("webdriver.chrome.driver", "src\\test\\resources\\webdrivers\\chromedriver.exe");
@@ -22,7 +22,7 @@ public class CaixaVerdePage {
         navegador = new FirefoxDriver();
         actions = new Actions(navegador);
         navegador.get(url);
-        navegador.switchTo().frame(0);
+        navegador.switchTo().frame(0); //"sub-pagina"
     }
 
     public void fecharPagina(){
@@ -31,14 +31,14 @@ public class CaixaVerdePage {
     }
 
     public void longclick() throws InterruptedException {
-        WebElement element = navegador.findElement(mapGreenBox);
+        WebElement element = navegador.findElement(mapQuadroVerde);
         actions.clickAndHold(element).build().perform();
         Thread.sleep(1500);
         actions.moveToElement(element).release();
     }
 
-    public int[] getSizeGreenBox(){
-        Dimension tamanho = navegador.findElement(mapGreenBox).getSize();
+    public int[] getSizeQuadroVerde(){
+        Dimension tamanho = navegador.findElement(mapQuadroVerde).getSize();
         return new int[]{tamanho.height, tamanho.width};
     }
 }
