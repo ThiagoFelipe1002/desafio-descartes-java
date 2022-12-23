@@ -6,10 +6,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 
-public class GreenFramePage {
+public class PageObjectsSquare {
     public FirefoxDriver browser;
     public Actions actions;
-    private final String url = "https://codepen.io/choskim/pen/RLYebL";
+    String url = "https://codepen.io/choskim/pen/RLYebL";
     private By mapSquare = By.className("square");
     public int webBrowserFrame = 0;
     public int timeLongClick = 1500;

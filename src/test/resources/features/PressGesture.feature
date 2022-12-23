@@ -1,4 +1,4 @@
-Feature: BDD
+Feature: PressGesture
 
 	Scenario: Larger scale after longclick
 		Given that the user is on the hammer.js page
