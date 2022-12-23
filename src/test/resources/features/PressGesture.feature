@@ -1,7 +1,6 @@
-#language: pt
-Funcionalidade: Press Gesture
+Feature: BDD
 
-	Cenario: Escala maior após o longclick
-		Dado que o usuario esteja na pagina hammer.js
-		Quando o usuario efetuar um longclick no quadro verde
-		Entao o quadro verde expande seu tamanho para 225 x 225
+	Scenario: Larger scale after longclick
+		Given that the user is on the hammer.js page
+		When the user makes a longclick on the green frame
+		Then the green frame expands its size to 225 x 225
